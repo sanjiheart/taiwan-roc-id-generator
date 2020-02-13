@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>ID</title>
+</head>
+
+<body>
+    <select id="city-code">
+        <option value="A10">臺北市(A)</option>
+        <option value="B11">臺中市(B)</option>
+        <option value="C12">基隆市(C)</option>
+        <option value="D13">臺南市(D)</option>
+        <option value="E14">高雄市(E)</option>
+        <option value="F15">新北市(F)</option>
+        <option value="G16">宜蘭縣(G)</option>
+        <option value="H17">桃園市(H)</option>
+        <option value="I34">嘉義市(I)</option>
+        <option value="J18">新竹縣(J)</option>
+        <option value="K19">苗栗縣(K)</option>
+        <option value="L20">臺中縣(L)</option>
+        <option value="M21">南投縣(M)</option>
+        <option value="N22">彰化縣(N)</option>
+        <option value="O35">新竹市(O)</option>
+        <option value="P23">雲林縣(P)</option>
+        <option value="Q24">嘉義縣(Q)</option>
+        <option value="R25">臺南縣(R)</option>
+        <option value="S26">高雄縣(S)</option>
+        <option value="T27">屏東縣(T)</option>
+        <option value="U28">花蓮縣(U)</option>
+        <option value="V29">臺東縣(V)</option>
+        <option value="W32">金門縣(W)</option>
+        <option value="X30">澎湖縣(X)</option>
+        <option value="Y31">陽明山管理局(Y)</option>
+        <option value="Z33">連江縣(Z)</option>
+    </select>
+    <button type="button" id="generate">Generate</button>
+    <input type="text" id="result" readonly>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        $('#generate').click(() => {
+            let cityCodeNum = $('#city-code').val().split('');
+            let n1 = parseInt(cityCodeNum[1]);
+            let n2 = parseInt(cityCodeNum[2]);
+            let n3 = Math.floor(Math.random() * 2) + 1;
+            let n4 = Math.floor(Math.random() * 9) + 1;
+            let n5 = Math.floor(Math.random() * 9) + 1;
+            let n6 = Math.floor(Math.random() * 9) + 1;
+            let n7 = Math.floor(Math.random() * 9) + 1;
+            let n8 = Math.floor(Math.random() * 9) + 1;
+            let n9 = Math.floor(Math.random() * 9) + 1;
+            let n10 = Math.floor(Math.random() * 9) + 1;
+            let n11 = 10 - (n1 * 1 + n2 * 9 + n3 * 8 + n4 * 7 + n5 * 6 + n6 * 5 + n7 * 4 + n8 * 3 + n9 * 2 + n10 * 1) % 10;
+            let result = cityCodeNum[0] + String(n3) + String(n4) + String(n5) + String(n6) + String(n7) + String(n8) + String(n9) + String(n10) + String(n11);
+            $('#result').val(result);
+        });
+    </script>
+</body>
+
+</html>

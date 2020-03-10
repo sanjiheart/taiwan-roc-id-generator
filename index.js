@@ -1,5 +1,7 @@
 $(function () {
 
+    new ClipboardJS('.btn');
+
     $('#generate').click(() => {
         let cityCodeNum = $('#city-code').val().split('');
         let n1 = parseInt(cityCodeNum[1]);

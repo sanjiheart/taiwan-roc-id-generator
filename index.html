@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Taiwan ROC ID Generator</title>
+    <title>Taiwan ROC ID之呼吸</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,17 +15,18 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container">
-                <a class="navbar-brand">Taiwan ROC ID Generator</a>
+                <a class="navbar-brand">Taiwan ROC ID之呼吸</a>
             </div>
         </nav>
     </header>
     <main class="main container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-6">
                 <div class="card">
+                    <div class="card-header">隨機產生</div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-12 col-md-3">
+                            <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="city-code">縣市</label>
                                     <select id="city-code" class="form-control">
@@ -58,7 +59,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-3">
+                            <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="gender">性別</label>
                                     <select id="gender" class="form-control">
@@ -67,18 +68,21 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-3 mb-3">
-                                <label for="">&nbsp;</label>
-                                <button type="button" class="btn btn-primary btn-block" id="generate">全集中產生</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <button type="button" class="btn btn-primary btn-block" id="generate">全集中呼呼</button>
                             </div>
-                            <div class="col-12 col-md-3">
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
                                 <div class="form-group">
-                                    <label for="result">身分證字號</label>
+                                    <label for="g-result">身分證字號</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="result" readonly>
+                                        <input type="text" class="form-control" id="g-result" readonly>
                                         <div class="input-group-append">
                                             <button type="button" class="btn btn-secondary"
-                                                data-clipboard-target="#result">
+                                                data-clipboard-target="#g-result">
                                                 <i class="fas fa-copy"></i>
                                             </button>
                                         </div>
@@ -89,11 +93,42 @@
                     </div>
                 </div>
             </div>
+            <div class="col-12 col-md-6">
+                <form onsubmit="return false;">
+                    <div class="card">
+                        <div class="card-header">指定驗證</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="source">身分證字號</label>
+                                        <input type="text" class="form-control" maxlength="10" autocomplete="off"
+                                            id="source" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <button type="submit" class="btn btn-primary btn-block" id="validate">全集中吸吸</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="v-result">隙之線</label>
+                                        <input type="text" class="form-control" id="v-result" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     <footer class="footer mb-auto py-3">
         <div class="container">
-            <span class="float-right align-middle text-dark">本產生器僅供開發測試，請勿<strong
+            <span class="float-right align-middle text-dark">本呼吸僅供開發人員測試使用，請勿<strong
                     class="text-danger">違法</strong>，感謝。</span>
         </div>
     </footer>

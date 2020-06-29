@@ -27,7 +27,7 @@ $(function () {
                 let n2 = 0;
                 $.each($('#city-code').find('option'), function () {
                     if ($(this).val().includes($('#source').val()[0])) {
-                        let cityCodeNum = $('#city-code').val().split('');
+                        let cityCodeNum = $(this).val().split('');
                         n1 = parseInt(cityCodeNum[1]);
                         n2 = parseInt(cityCodeNum[2]);
                     }

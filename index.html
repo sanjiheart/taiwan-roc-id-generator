@@ -37,10 +37,9 @@
                                     <div class="row">
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="city-code" class="form-label">縣市</label>
-                                            <select id="city-code" class="form-select" v-model="cityCode">
-                                                <option :value="cityCodeObj.code"
-                                                    v-for="cityCodeObj of $cityCodeObjList">{{
-                                                    cityCodeObj.name }}</option>
+                                            <select id="city-code" class="form-select" v-model="cityObj">
+                                                <option :value="cityObj" v-for="cityObj of $cityObjList">{{
+                                                    cityObj.name }}</option>
                                             </select>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
@@ -84,8 +83,9 @@
                                     <div class="row">
                                         <div class="col-12 mb-3">
                                             <label for="source" class="form-label">身分證字號</label>
-                                            <input type="text" class="form-control" maxlength="10" autocomplete="off"
-                                                id="source" v-model="source" required>
+                                            <input type="text" class="form-control" maxlength="10"
+                                                pattern="[A-Z]\d{9,9}" autocomplete="off" id="source" v-model="source"
+                                                required>
                                         </div>
                                     </div>
                                     <div class="row">
